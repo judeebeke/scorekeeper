@@ -1,0 +1,20 @@
+.content {
+    text-align: center;
+    margin-top: 8.2rem;
+    margin-bottom: 8.4rem;
+    margin-left: 20%;
+    margin-right: 20%;
+    color: #fff;
+}
+
+.green {
+    color: green;
+}
+
+body {
+    background-image: url("cover.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
