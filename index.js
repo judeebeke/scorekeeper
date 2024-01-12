@@ -13,7 +13,8 @@ let reset = document.getElementById("reset");
 button.forEach((item) => {
     item.addEventListener("click", function() {
         if (item == button[0]) {
-            let limit = document.querySelector("#limit");
+            const limit = document.querySelector("#limit");
+            const label = document.querySelector(".input-label"); 
 
             ps1++;
 
@@ -21,6 +22,7 @@ button.forEach((item) => {
 
             if(ps1 == 1) {
                 limit.disabled = true;
+                label.hidden = true;
             }
 
             if (ps1 == limit.value || (ps1 > ps2 && ps1 > limit.value)) {
@@ -28,17 +30,21 @@ button.forEach((item) => {
                 button[0].setAttribute("disabled", "true");
                 button[1].setAttribute("disabled", "true");
                 limit.disabled = false;
+                label.hidden = false;
 
                 printWinner();
             }
         } else {
-            let limit = document.querySelector("#limit");
+            const limit = document.querySelector("#limit");
+            const label = document.querySelector(".input-label"); 
 
             ps2++;
 
             ct2.textContent = ps2;
             if(ps2 == 1) {
                 limit.disabled = true;
+                label.hidden = true;
+
             }
 
             if (ps2 == limit.value || (ps2 > ps1 && ps2 > limit.value)) {
@@ -46,6 +52,7 @@ button.forEach((item) => {
                 button[0].setAttribute("disabled", "true");
                 button[1].setAttribute("disabled", "true");
                 limit.disabled = false;
+                label.hidden = false;
 
                 printWinner();
             }
@@ -57,6 +64,7 @@ reset.addEventListener("click", function() {
     button[0].removeAttribute("disabled");
     button[1].removeAttribute("disabled");
     const limit = document.querySelector("#limit");
+    const label = document.querySelector(".input-label"); 
 
     ct1.classList.remove("green");
     ct2.classList.remove("green");
@@ -69,6 +77,7 @@ reset.addEventListener("click", function() {
 
     limit.value = 5;
     limit.disabled = false;
+    label.hidden = false;
 
     winner.textContent = " ";
 });
