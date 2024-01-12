@@ -1,9 +1,6 @@
 .content {
     text-align: center;
-    margin-top: 8.2rem;
-    margin-bottom: 8.4rem;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin: 8.2rem auto;
     color: #fff;
 }
 
@@ -17,4 +14,28 @@ body {
     height: 100vh;
     background-repeat: no-repeat;
     overflow: hidden;
+}
+
+.limit {
+    width: 200px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 30px;
+    width: 100%;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 920px) {
+    .pl-btn {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }   
+
+    .limit {
+        width: 250px !important;
+    }
 }
